@@ -1,0 +1,5 @@
+# Śledzimy tylko wybrane pliki z pracą domową — resztę ignorujemy
+/*
+!.gitignore
+!Zad_2_praca_domowa.py
+!Zad_3_praca_domowa.py
