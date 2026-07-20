@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moja strona</title>
+  <link rel="stylesheet" href="Zad_5_style.css">
+</head>
+
+<body>
+  <section class="ai-chat">
+    <p class="intro">Cześć! Wypełnij poniższy formularz.</p>
+
+    <form>
+      <label for="question">Zadaj pytanie:</label>
+      <input type="text" id="question" name="question" placeholder="Wpisz swoje pytanie..."
+      required minlength="3">
+
+      <label for="imie">Jak masz na imię?</label>
+      <input type="text" id="imie" name="imie" placeholder="np. Kasia" required>
+
+      <label for="email">Twój e-mail:</label>
+      <input type="email" id="email" name="email" placeholder="jan@przyklad.pl" required>
+
+      <label for="password">Hasło:</label>
+      <input type="password" id="password" name="password" minlength="6" required>
+
+      <label for="wiek">Twój wiek:</label>
+      <input type="range" id="wiek" name="wiek" min="0" max="100">
+
+      <label for="kraj">Wybierz kraj:</label>
+      <select id="kraj" name="kraj">
+        <option value="pl">Polska</option>
+        <option value="de">Niemcy</option>
+        <option value="fr">Francja</option>
+      </select>
+
+      <p>Płeć:</p>
+      <div class="radio-group">
+        <input type="radio" id="kobieta" name="plec" value="k">
+        <label for="kobieta">Kobieta</label>
+        <input type="radio" id="mezczyzna" name="plec" value="m">
+        <label for="mezczyzna">Mężczyzna</label>
+      </div>
+
+      <label for="wiadomosc">Wiadomość:</label>
+      <textarea id="wiadomosc" name="wiadomosc" rows="4" placeholder="Napisz coś..."></textarea>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">Akceptuję regulamin</label>
+      </div>
+
+      <button type="submit">Wyślij formularz</button>
+    </form>
+  </section>
+
+  <p id="page-footer">© 2026 Moja strona. Wszystkie prawa zastrzeżone.</p>
+
+</body>
+</html>
