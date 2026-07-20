@@ -21,10 +21,9 @@ names = ['Paweł', 'Kewin', 'Ireneusz', 'Bolesław', 'Mateusz',
 name_dict = {}
 for name in names:
     if name[0] not in name_dict.keys():
-        name_dict[name[0]] = [name]
-    elif name[0] in name_dict.keys():
-        if name not in name_dict[name[0]]:
-            name_dict[name[0]].append(name)
+        name_dict[name[0]] = {name}
+    else:
+        name_dict[name[0]].add(name)
 print(name_dict)
 
 
