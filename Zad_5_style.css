@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 :root {
     --main-color: #423a60;
     --text-color: darkolivegreen;
@@ -45,11 +47,16 @@ body {
     margin-bottom: -6px;
 }
 
+.ai-chat form p {
+    font-weight: bold;
+    margin-bottom: -6px;
+}
+
 input, textarea, select {
     padding: 10px;
     border-radius: 6px;
     border: 1px solid var(--border-color);
-    font-size: 16px
+    font-size: 16px;
     font-family: inherit;
     width: 100%;
     box-sizing: border-box;
@@ -97,6 +104,7 @@ input[type="radio"]:checked {
 button {
     background-color: var(--text-color);
     color: white;
+    font-family: inherit;
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
