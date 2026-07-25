@@ -94,10 +94,10 @@ def main():
     licznik_zapytan = 0
 
     while True:
-        pytanie_uzytkownika = input("\nTy: ").strip()
+        pytanie_uzytkownika = input("\nTy: ")
 
         # Warunek zakończenia — sprawdzany jako pierwszy
-        if pytanie_uzytkownika.lower() == "quit":
+        if pytanie_uzytkownika.lower().strip() == "quit":
             print(f"\nDo zobaczenia! \nLiczba wykonanych zapytań: {licznik_zapytan}. ")
             zapisz_rozmowe_do_pliku("zapis_rozmowy.txt")
             print("Rozmowa została zapisana do pliku rozmowa.txt.")
