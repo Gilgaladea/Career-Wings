@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main class="container">
+    <h1>Logowanie</h1>
+    <form action="/logowanie" method="POST">
+    <input type="text" class="textinput" name="nazwa_uzytkownika" placeholder="Nazwa użytkownika" required>
+    <input type="password" class="textinput" name="haslo" placeholder="Hasło" required>
+    <button type="submit">Zaloguj się</button>
+    </form>
+    {% if blad %}<p class="answer-box">{{ blad }}</p>{% endif %}
+    <p><a href="/rejestracja">Nie masz konta? Zarejestruj się</a></p>
+    <p><a href="/">Wróć do strony głównej</a></p>
+</main>
+</body>
+</html>

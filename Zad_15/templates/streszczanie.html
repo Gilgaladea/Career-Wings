@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streść tekst</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main class="container">
+    <nav>
+        <a href="/">Zapytaj AI</a> |
+        <a href="/analiza-strona">Analizuj dane</a> |
+        <a href="/streszczanie-strona">Streść tekst</a> |
+        {% if session.get("nazwa_uzytkownika") %}
+            <a href="/wyloguj">Wyloguj</a>
+        {% else %}
+            <a href="/logowanie">Logowanie</a>
+        {% endif %}
+    </nav>
+    <h1>Streść tekst</h1>
+    <form action="/stresc" method="POST">
+        <textarea name="tekst" id="tekst" rows="15"
+              placeholder="Napisz/Wklej tekst do streszczenia..."></textarea>
+        <button type="submit">Wyślij</button>
+    </form>
+
+    <div class="answer-box">
+        {% if odpowiedz %}
+        <p>{{ odpowiedz }}</p>
+        {% else %}
+        <p>Tutaj pojawi się odpowiedź AI.</p>
+        {% endif %}
+    </div>
+</main>
+</body>
+</html>
